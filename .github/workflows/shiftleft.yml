@@ -50,7 +50,7 @@ jobs:
     - name: Export NG SAST Findings
       run: |
         cd $HOME
-        git clone --depth 1 --branch v0.0.3  https://github.com/ShiftLeftSecurity/field-integrations
+        git clone --depth 1 --branch v0.0.4  https://github.com/ShiftLeftSecurity/field-integrations
         cd field-integrations/shiftleft-utils || exit 1
         mkdir -p ${GITHUB_WORKSPACE}/ngsast_results
         pip3 install -r requirements.txt
@@ -98,7 +98,7 @@ jobs:
       if: github.event_name == 'pull_request'
       env:
         OWASP_BENCHMARK_CHECKSUM: ${{ env.OWASP_BENCHMARK_CHECKSUM }}
-        SHIFTLEFT_USER_ID_V2: e14cc588-7680-435d-bcbf-82c731dbe8d6
+        SHIFTLEFT_USER_ID_V2: 9d424c70-f9f6-420d-a862-3d8a41ac011e
         SHIFTLEFT_ACCESS_TOKEN: ${{ secrets.SHIFTLEFT_ACCESS_TOKEN }}
         SHIFTLEFT_API_HOST: www-ext.stg.shiftleft.io
         SHIFTLEFT_GRPC_TELEMETRY_HOST: SL_EXTERNAL_GRPC_TELEMETRY_HOST_TOKEN
