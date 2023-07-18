@@ -102,7 +102,7 @@ jobs:
       if: github.event_name == 'pull_request'
       env:
         OWASP_BENCHMARK_CHECKSUM: ${{ env.OWASP_BENCHMARK_CHECKSUM }}
-        SHIFTLEFT_USER_ID_V2: e14cc588-7680-435d-bcbf-82c731dbe8d6
+        SHIFTLEFT_USER_ID_V2: 5134378c-6fdb-41a6-97b8-d14130450b58
         SHIFTLEFT_ACCESS_TOKEN: ${{ secrets.SHIFTLEFT_ACCESS_TOKEN }}
         SHIFTLEFT_API_HOST: www-ext.stg.shiftleft.io
         SHIFTLEFT_GRPC_TELEMETRY_HOST: telemetry.stg.shiftleft.io:443
